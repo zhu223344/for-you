@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>ขอบคุณที่มาใช้ชีวิตด้วยกัน</title>
+
+  <!-- ฟอนต์ -->
+  <link href="https://fonts.googleapis.com/css2?family=Itim&family=Prompt:wght@300;400&display=swap" rel="stylesheet">
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      min-height: 100vh;
+      font-family: 'Prompt', sans-serif;
+      overflow: hidden;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      /* แบล็คกราวด์เคลื่อนไหว */
+      background: linear-gradient(
+        -45deg,
+        #ffd6e8,
+        #fff1cc,
+        #ffe6f0,
+        #fff8e1
+      );
+      background-size: 400% 400%;
+      animation: gradientMove 15s ease infinite;
+    }
+
+    @keyframes gradientMove {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
+    }
+
+    /* แสงฟุ้งด้านหลัง */
+    body::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background:
+        radial-gradient(circle at 20% 30%, rgba(255,192,203,0.35), transparent 40%),
+        radial-gradient(circle at 80% 70%, rgba(255,228,181,0.4), transparent 45%);
+      filter: blur(40px);
+      z-index: 0;
+    }
+
+    /* การ์ด */
+    .card {
+      position: relative;
+      z-index: 2;
+      background: rgba(255, 255, 255, 0.78);
+      backdrop-filter: blur(8px);
+      border-radius: 24px;
+      padding: 30px 25px;
+      width: 90%;
+      max-width: 420px;
+      text-align: center;
+      box-shadow: 0 15px 40px rgba(0,0,0,0.1);
+
+      /* แอนิเมชันเลื่อนขึ้น */
+      animation: slideUp 1.2s ease forwards;
+      opacity: 0;
+    }
+
+    @keyframes slideUp {
+      from {
+        transform: translateY(40px);
+        opacity: 0;
+      }
+      to {
+        transform: translateY(0);
+        opacity: 1;
+      }
+    }
+
+    .image-box {
+      width: 100%;
+      height: 260px;
+      border-radius: 20px;
+      overflow: hidden;
+      background: #f7dbe6;
+      margin-bottom: 20px;
+    }
+
+    .image-box img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    h1 {
+      font-family: 'Itim', cursive;
+      color: #e26a9c;
+      font-size: 28px;
+      margin-bottom: 12px;
+    }
+
+    p {
+      color: #555;
+      font-size: 15px;
+      line-height: 1.7;
+    }
+
+    .heart {
+      margin-top: 14px;
+      font-size: 22px;
+    }
+
+    /* ฟองลอย */
+    .bubble {
+      position: absolute;
+      bottom: -100px;
+      background: rgba(255, 255, 255, 0.6);
+      border-radius: 50%;
+      animation: floatUp linear infinite;
+      z-index: 1;
+    }
+
+    @keyframes floatUp {
+      from {
+        transform: translateY(0);
+        opacity: 0.8;
+      }
+      to {
+        transform: translateY(-120vh);
+        opacity: 0;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ฟอง -->
+  <div class="bubble" style="left:10%; width:30px; height:30px; animation-duration: 18s;"></div>
+  <div class="bubble" style="left:25%; width:18px; height:18px; animation-duration: 14s;"></div>
+  <div class="bubble" style="left:40%; width:40px; height:40px; animation-duration: 22s;"></div>
+  <div class="bubble" style="left:55%; width:22px; height:22px; animation-duration: 16s;"></div>
+  <div class="bubble" style="left:70%; width:34px; height:34px; animation-duration: 20s;"></div>
+  <div class="bubble" style="left:85%; width:16px; height:16px; animation-duration: 13s;"></div>
+
+  <!-- การ์ด -->
+  <div class="card">
+    <div class="image-box"><h1>รักน้าาา</h1>
+      <img src="https://scontent.fbkk8-2.fna.fbcdn.net/v/t39.30808-6/605197948_24922628054077415_7328539867594641964_n.jpg?stp=dst-jpg_p526x296_tt6&_nc_cat=106&ccb=1-7&_nc_sid=833d8c&_nc_ohc=gdYbUCEg4aQQ7kNvwElONIw&_nc_oc=AdkVr8gI19XPF1xFu9F7-QOtuG-nlk0djQlKXJtkyFANUhyIlpAktg0iMEoNUNgaFWE&_nc_zt=23&_nc_ht=scontent.fbkk8-2.fna&_nc_gid=VVJc7M4QYVLWOv0-87mJRA&oh=00_Afm3hv9mNYPt1WVbXLMKxrnsh3-5eCsuUlainm0_cagoGg&oe=695563B3" alt="รูปของเรา">
+    </div>
+
+    <h1>ขอบคุณเธอมากๆนะ</h1>
+    <p>
+      ขอบคุณที่พยายามเพื่อกัน ขอบคุณที่เธอพยายามเข้าใจกัน  
+      เค้าจะพยายามทำให้ความสัมพันธ์นี้มันออกมาดีที่สุดเท่าที่เค้าจะทำได้  
+      เค้ารักเธอนะ 🤍
+    </p>
+
+    <div class="heart">💗✨</div>
+  </div>
+
+</body>
+</html>
